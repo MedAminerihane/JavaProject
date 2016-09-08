@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui" template="/template/template.xhtml">
+	<ui:define name="pageTitle">
+		egov|Commerce
+	</ui:define>
+
+
+	<ui:define name="pageContent">
+		<div class="breadcrumb-place ">
+			<div class="row clearfix">
+				<h1 class="page-title">Commerce</h1>
+			</div>
+			<!-- row -->
+		</div>
+
+
+		<div id="main" class="page-content">
+			<div class="page-content">
+				<div class="row clearfix">
+					<div class="vc_row wpb_row vc_row-fluid">
+
+						<div class=" grid_8 posts m-thumbnails">
+							<div class="wpb_wrapper">
+								<div class="clearfix title-left">
+									<h2 class="col-title">
+										<i class="title-icon icon-edit"
+											style="color: #cc8800 !important;"></i> Préalables à la
+										création d'entreprise
+									</h2>
+								</div>
+
+								<p>Ce dossier fait le point sur les étapes nécessaires pour
+									créer une entreprise, propose une synthèse des formalités
+									obligatoires, présente les formes juridiques existantes pour
+									créer sa société.</p>
+
+
+								<ul class="tt-toggle">
+									<li class="sub-toggle">
+										<div class="toggle-head">
+											<div class="toggle-head-sign">+</div>
+											<p>Étude de marché</p>
+										</div>
+
+									</li>
+								</ul>
+								<p>L'étude de marché permet d'orienter et de valider les
+									choix juridiques, économiques ou logistiques du porteur de
+									projet, en suivant différentes étapes : réalisation d'un
+									questionnaire, entretiens avec les professionnels du secteur,
+									estimation du chiffre d'affaires prévisionnel qui servira de
+									base à la recherche des financements... Pour le porteur de
+									projet, le choix du lieu d'implantation de la future entreprise
+									est déterminant pour sa viabilité : il est important d'avoir
+									une visibilité claire de la clientèle potentielle.</p>
+
+									<ul class="tt-toggle">
+										<li class="sub-toggle">
+											<div class="toggle-head">
+												<div class="toggle-head-sign">+</div>
+												<p>Choix du statut juridique de l'entreprise en création</p>
+											</div>
+											
+										</li>
+									</ul>
+									
+									<p>
+												L'entrepreneur doit choisir un statut juridique pour son
+												entreprise, entreprise individuelle ou société, qui sera
+												déterminant pour les formalités de déclaration, pour son
+												statut juridique personnel, ainsi qu'en matière fiscale,
+												administrative ou sociale. Créer une société consiste à
+												donner naissance à une nouvelle personne juridiquement
+												distincte des associés fondateurs, que l'on nomme "personne
+												morale".</p>
+
+									<ul class="tt-toggle">
+										<li class="sub-toggle">
+											<div class="toggle-head">
+												<div class="toggle-head-sign">+</div>
+												<p>Coût d'une création d'entreprise</p>
+											</div>
+											
+										</li>
+									</ul>
+										<p>
+												Les formalités de création d'entreprise comportent des coûts
+												qui diffèrent selon le type d'entreprise et la nature de son
+												activité, à la fois pour les procédures obligatoires auprès
+												des centres de formalités des entreprises (immatriculation,
+												annonces légales, rédaction des statuts, etc.), mais aussi
+												des frais annexes (dépôt de marque, signature d'un bail
+												commercial, par exemple). <br /> <b> > Livret fiscal de la
+												création d'entreprise</b> <br /> Comment choisir le régime
+												d'imposition d'une entreprise en création ? Ce document
+												permet de faire le point sur les obligations fiscales du
+												créateur d'entreprise et d'anticiper les coûts fiscaux lors
+												du lancement de projet.<br /><b> > Combien coûtent les
+												formalités de création d'entreprise ?</b> <BR /> Le coût des
+												formalités pour la création d'une entreprise varie selon le
+												statut juridique choisi, s'il s'agit d'une entreprise
+												individuelle ou d'une société. Le coût d'une immatriculation
+												varie selon les départements.
+											</p>
+
+									<h:form>
+
+										<h:commandButton action="/CreateEntreprise"
+											value="Create" />
+
+									</h:form>
+								</div>
+						</div>
+						<div class="vc_col-sm-4 wpb_column vc_column_container">
+							<div class="wpb_wrapper">
+								<div class="clearfix title-left">
+									<h2 class="col-title">
+										<i class="title-icon icon-map-marker"
+											style="color: #cc8800 !important;"></i>Address
+									</h2>
+								</div>
+								<div class="wpb_text_column wpb_content_element ">
+									<div class="wpb_wrapper">
+										<p>
+											<strong>Avenue Habib Bourguiba, 1000 Tunis, Tunisie</strong><br />
+										</p>
+										<div class="gap clearfix" style="height: 10px;"></div>
+										<i class="icon-phone icon-xs" style="color: #999 !important;"></i>
+										<strong>Tel</strong>: 71333000
+										<div class="clearfix"></div>
+										<i class="icon-print icon-xs" style="color: #999 !important;"></i>
+										<strong>Fax:</strong> 71333000
+										<div class="clearfix"></div>
+										<i class="icon-envelope-alt icon-xs"
+											style="color: #999 !important;"></i> <strong>Email:</strong>
+										info@egov.tn
+										<div class="clearfix"></div>
+										<div class="gap clearfix" style="height: 10px;"></div>
+
+									</div>
+								</div>
+								<div class="gap clearfix" style="height: 50px;"></div>
+								<div class="clearfix title-left">
+									<h2 class="col-title">
+										<i class="title-icon icon-time"
+											style="color: #cc8800 !important;"></i>Business Hours
+									</h2>
+								</div>
+								<div class="wpb_text_column wpb_content_element ">
+									<div class="wpb_wrapper">
+										<p>
+											<strong>Monday</strong> to<strong> Friday</strong>: 9.00 AM –
+											5.00 PM<br /> <strong>Saturday</strong> : 10.00 AM – 2.00 PM<br />
+											<strong>Sunday</strong>: Closed
+										</p>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</ui:define>
+</ui:composition>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="E-Goverment">
+		<jta-data-source>java:/MySqlDS</jta-data-source>
+		<class>edu.esprit.domain.Admin</class>
+		<class>edu.esprit.domain.Agent</class>
+		<class>edu.esprit.domain.BirthRegistration</class>
+		<class>edu.esprit.domain.CareerObjectiveService</class>
+		<class>edu.esprit.domain.Categorie</class>
+		<class>edu.esprit.domain.CinRequest</class>
+		<class>edu.esprit.domain.Cinema</class>
+		<class>edu.esprit.domain.Citizen</class>
+		<class>edu.esprit.domain.Claim</class>
+		<class>edu.esprit.domain.Client</class>
+		<class>edu.esprit.domain.Company</class>
+		<class>edu.esprit.domain.CompanyRequest</class>
+		<class>edu.esprit.domain.DemandeCinema</class>
+		<class>edu.esprit.domain.DemandePharmacie</class>
+		<class>edu.esprit.domain.EDinarCard</class>
+		<class>edu.esprit.domain.EDinarServiceRequest</class>
+		<class>edu.esprit.domain.Employee</class>
+		<class>edu.esprit.domain.Etablishment</class>
+		<class>edu.esprit.domain.Finance</class>
+		<class>edu.esprit.domain.FinanceInstitut</class>
+		<class>edu.esprit.domain.Impot</class>
+		<class>edu.esprit.domain.ImpotInfo</class>
+		<class>edu.esprit.domain.Infraction</class>
+		<class>edu.esprit.domain.RequiredDocument</class>
+		<class>edu.esprit.domain.RoadTaxService</class>
+		<class>edu.esprit.domain.Sante</class>
+		<class>edu.esprit.domain.Service</class>
+		<class>edu.esprit.domain.TaxInfo</class>
+		<class>edu.esprit.domain.Taxe</class>
+		<class>edu.esprit.domain.TransportLine</class>
+		<class>edu.esprit.domain.University</class>
+		<properties>
+		    <property name="hibernate.show_sql" value="true"/>
+    	    <property name="hibernate.format_sql" value="true"/>
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+		</properties>
+	</persistence-unit>
+</persistence>

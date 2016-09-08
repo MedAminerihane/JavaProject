@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui"
+	template="/template/template.xhtml">
+
+	<ui:define name="pageTitle">
+		Declare Tax
+	</ui:define>
+	
+	<ui:define name="pageContent">
+		
+		
+		<h:form>
+		<p:commandLink action="/pages/Company/Fiscalite/InfoImpot" value="> Information about impot" />
+		
+		<h:head> <h1><p:outputLabel value="Information about Impot"/></h1> </h:head>
+		<p:outputLabel value="L'impôt sur le revenu est un impôt global établi sur la totalité des revenus dont disposent les personnes physiques au cours d'une année. Les entreprises dont le statut juridique est celui de l'entreprise individuelle (travailleur indépendant, artisan, commerçant, profession libérale, exploitant agricole non salarié), sont imposées sous le régime de l'impôt sur le revenu."/>		
+		
+		<p:dataTable value="#{infoImpot.impotInfo}" >
+		<p:column>
+		<f:facet name="header">
+		Bénéfices industriels et commerciaux (BIC) : régimes fiscaux et déclarations
+		</f:facet>
+		<p:outputLabel value="#{infoImpot.impotInfo.BIC}" />
+		</p:column>
+		<p:column>
+		<f:facet name="header">
+		Bénéfices non commerciaux (BNC) : régimes fiscaux et déclarations
+		</f:facet>
+		<p:outputLabel value="#{infoImpot.impotInfo.BNC}" />
+		</p:column>
+		<p:column>
+		<f:facet name="header">
+		Bénéfices non commerciaux (BNC) : détermination du résultat imposable
+		</f:facet>
+		<p:outputLabel value="#{infoImpot.impotInfo.BNCResultat}" />
+		</p:column>
+		
+		<p:column>
+		<f:facet name="header">
+		Bénéfices Agricoles
+		</f:facet>
+		<p:outputLabel value="#{infoImpot.impotInfo.beneficeAgri}" />
+		</p:column>
+		
+		<p:column>
+		<f:facet name="header">
+		Imposition de l'auto-entrepreneur
+		</f:facet>
+		<p:outputLabel value="#{infoImpot.impotInfo.imposition}" />
+		</p:column>
+		</p:dataTable>
+		</h:form>
+				
+	</ui:define>
+
+</ui:composition>

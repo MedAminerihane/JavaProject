@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui" template="/template/template.xhtml">
+
+	<ui:define name="pageTitle">
+		Opening cinema
+	</ui:define>
+
+	<ui:define name="pageContent">
+		<div class="breadcrumb-place ">
+			<div class="row clearfix">
+				<h1 class="page-title">Secteurs</h1>
+			</div>
+			<!-- row -->
+		</div>
+
+		<h:messages globalOnly="true" />
+		<div id="main" class="page-content">
+			<div class="page-content">
+				<div class="row clearfix">
+					<div class="vc_row wpb_row vc_row-fluid">
+
+						<div class=" grid_8 posts m-thumbnails">
+							<div class="wpb_wrapper">
+								<div class="clearfix title-left">
+									<h2 class="col-title">
+										<i class="title-icon icon-edit"
+											style="color: #cc8800 !important;"></i> Cinema
+									</h2>
+								</div>
+
+								<div class="wpcf7" id="wpcf7-f5-p261-o2" lang="en-US" dir="ltr">
+
+									<h:form>
+										<p:commandLink action="/CinemaInfo"
+											value="> Cinema" />
+										<p:commandLink action="/OpenCinema"
+											value=" > Opening a cinema" />
+										<h:head>
+											<h1>
+												<p:outputLabel value="Opening a cinema" />
+											</h1>
+										</h:head>
+										<p:outputLabel
+											value="Any person or entity (municipality, association, corporation ...) wishing to operate a cinema must obtain an operating permit and approval of the hall and its projection equipment. Applications operating license for the establishment and approval of its rooms should be performed simultaneously." />
+										<p:dataTable value="#{infoCinemaBean.cinema}">
+											<p:column>
+												<f:facet name="header">
+		Activity concerned 
+		</f:facet>
+												<p:outputLabel value="#{infoCinemaBean.cinema.activites}" />
+											</p:column>
+											<p:column>
+												<f:facet name="header">
+		Operating license
+		</f:facet>
+												<p:outputLabel
+													value="#{infoCinemaBean.cinema.autorisationexp}" />
+											</p:column>
+											<p:column>
+												<f:facet name="header">
+		Cinematic planning permission
+		</f:facet>
+												<p:outputLabel value="#{infoCinemaBean.cinema.amenagement}" />
+											</p:column>
+											<p:column>
+												<f:facet name="header">
+         Approval of a movie theater		
+         </f:facet>
+												<p:outputLabel value="#{infoCinemaBean.cinema.homologation}" />
+											</p:column>
+
+										</p:dataTable>
+									</h:form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+
+</ui:composition>

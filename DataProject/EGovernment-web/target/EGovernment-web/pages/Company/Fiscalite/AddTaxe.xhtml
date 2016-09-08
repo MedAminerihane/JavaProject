@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui" template="/template/template.xhtml">
+
+	<ui:define name="pageTitle">
+		Declaration Taxe
+	</ui:define>
+
+	<ui:define name="script">
+		function calcul_tax() {
+            if ((document.getElementById('Form:regime_label').innerHTML=="Normal")&amp;&amp;(document.getElementById('Form:type_label').innerHTML=="Achat de Bien")) {
+            	document.getElementById('Form:percentTax').value=1.1;
+            } else if ((document.getElementById('Form:regime_label').innerHTML=="Normal")&amp;&amp;(document.getElementById('Form:type_label').innerHTML=="Livraison")) {
+            	document.getElementById('Form:percentTax').value=0.1;
+            } else if ((document.getElementById('Form:regime_label').innerHTML=="Normal")&amp;&amp;(document.getElementById('Form:type_label').innerHTML=="Achat Prestation de Service")) {
+            	document.getElementById('Form:percentTax').value=2.1;
+            } else if ((document.getElementById('Form:regime_label').innerHTML=="Normal")&amp;&amp;(document.getElementById('Form:type_label').innerHTML=="Exportation")) {
+            	document.getElementById('Form:percentTax').value=1.5;
+            } else if ((document.getElementById('Form:regime_label').innerHTML=="Simplifié")&amp;&amp;(document.getElementById('Form:type_label').innerHTML=="Livraison")) {
+            	document.getElementById('Form:percentTax').value=0.2;
+            } else if ((document.getElementById('Form:regime_label').innerHTML=="Simplifié")&amp;&amp;(document.getElementById('Form:type_label').innerHTML=="Achat Prestation de Service")) {
+            	document.getElementById('Form:percentTax').value=2.2;
+            } else if ((document.getElementById('Form:regime_label').innerHTML=="Simplifié")&amp;&amp;(document.getElementById('Form:type_label').innerHTML=="Exportation")) {
+            	document.getElementById('Form:percentTax').value=1.2;
+            } else if ((document.getElementById('Form:regime_label').innerHTML=="Simplifié")&amp;&amp;(document.getElementById('Form:type_label').innerHTML=="Achat de Bien")) {
+            	document.getElementById('Form:percentTax').value=2.5;
+            } else if ((document.getElementById('Form:regime_label').innerHTML=="Simplifié Agricole")&amp;&amp;(document.getElementById('Form:type_label').innerHTML=="Livraison")) {
+            	document.getElementById('Form:percentTax').value=0.3;
+            } else if ((document.getElementById('Form:regime_label').innerHTML=="Simplifié Agricole")&amp;&amp;(document.getElementById('Form:type_label').innerHTML=="Achat Prestation de Service")) {
+            	document.getElementById('Form:percentTax').value=2.3;
+            } else if ((document.getElementById('Form:regime_label').innerHTML=="Simplifié Agricole")&amp;&amp;(document.getElementById('Form:type_label').innerHTML=="Exportation")) {
+            	document.getElementById('Form:percentTax').value=1.3;
+            } else if ((document.getElementById('Form:regime_label').innerHTML=="Simplifié Agricole")&amp;&amp;(document.getElementById('Form:type_label').innerHTML=="Achat de Bien")) {
+            	document.getElementById('Form:percentTax').value=3.5;
+            } 
+        }
+	</ui:define>
+
+	<ui:define name="pageContent">
+
+		<div class="breadcrumb-place ">
+			<div class="row clearfix">
+				<h1 class="page-title">Fiscalite</h1>
+			</div>
+			<!-- row -->
+		</div>
+
+
+		<div id="main" class="page-content">
+			<div class="page-content">
+				<div class="row clearfix">
+					<div class="vc_row wpb_row vc_row-fluid">
+						<div class=" grid_8 posts m-thumbnails">
+							<div class="wpb_wrapper">
+								<div class="clearfix title-left">
+									<h2 class="col-title">
+										<i class="title-icon icon-edit"
+											style="color: #cc8800 !important;"></i> Declare Taxe
+									</h2>
+								</div>
+								<h:form id="Form">
+									
+									<p>Les ventes et les prestations de service sont soumises à
+										la taxe sur la valeur ajoutée (TVA), perçue par le
+										professionnel qui réalise ces opérations et doit la reverser
+										aux services des impôts. Pour les opérations imposables, la
+										taxe est calculée sur le prix hors taxe selon des taux
+										différents. Le régime d'imposition (normal ou simplifié)
+										dépend du montant du chiffre d'affaires réalisé par
+										l'entreprise et du montant de TVA exigible annuel.</p>
+
+									<h:panelGrid columns="2" style="margin-bottom:10px"
+										cellpadding="5" columnClasses="label, value">
+
+
+										<h:outputText value="First name:" />
+										<h:inputText value="#{taxeBean.tax.firstName}" id="fname"
+											pt:required="true" />
+
+										<h:outputText value="Last name:" />
+										<h:inputText value="#{taxeBean.tax.lastName}" id="lname"
+											pt:required="true" />
+
+
+										<p:outputLabel for="button" value="Periode:" />
+										<p:calendar id="button" value="#{taxeBean.tax.periode}"
+											showOn="button" />
+
+										<p:outputLabel for="regime" value="Regime:" />
+
+										<p:selectOneMenu id="regime" value="#{taxeBean.tax.regime}"
+											widgetVar="editFamille" onchange="calcul_tax()">
+											<f:selectItem itemLabel="Normal" itemValue="Normal" />
+											<f:selectItem itemLabel="Simplifié" itemValue="Simplifié" />
+											<f:selectItem itemLabel="Simplifié Agricole"
+												itemValue="Simplifié Agricole" />
+										</p:selectOneMenu>
+
+										<p:outputLabel for="type" value="Type:" />
+										<p:selectOneMenu id="type" value="#{taxeBean.tax.type}"
+											onchange="calcul_tax()">
+											<f:selectItem itemLabel="Achat de Bien"
+												itemValue="Achat de Bien" />
+											<f:selectItem itemLabel="Livraison" itemValue="Livraison" />
+											<f:selectItem itemLabel="Achat Prestation de Service"
+												itemValue="Achat Prestation de Service" />
+											<f:selectItem itemLabel="Exportation" itemValue="Exportation" />
+										</p:selectOneMenu>
+
+										<h:outputText value="Tax (Percent):" />
+										<h:inputText value="#{taxeBean.taxUpdate.perCentTaxe}"
+											id="percentTax" pt:required="true" readonly="true" />
+
+									</h:panelGrid>
+
+									<p:commandButton action="#{taxeBean.addTax()}" value="Submit"
+										icon="ui-icon-check" />
+
+								</h:form>
+							</div>
+						</div>
+						
+						<div class="vc_col-sm-4 wpb_column vc_column_container">
+							<div class="wpb_wrapper">
+								<div class="clearfix title-left">
+									<h2 class="col-title">
+										<i class="title-icon icon-map-marker"
+											style="color: #cc8800 !important;"></i>Address
+									</h2>
+								</div>
+								<div class="wpb_text_column wpb_content_element ">
+									<div class="wpb_wrapper">
+										<p>
+											<strong>Avenue Habib Bourguiba, 1000 Tunis, Tunisie</strong><br />
+										</p>
+										<div class="gap clearfix" style="height: 10px;"></div>
+										<i class="icon-phone icon-xs" style="color: #999 !important;"></i>
+										<strong>Tel</strong>: 71333000
+										<div class="clearfix"></div>
+										<i class="icon-print icon-xs" style="color: #999 !important;"></i>
+										<strong>Fax:</strong> 71333000
+										<div class="clearfix"></div>
+										<i class="icon-envelope-alt icon-xs"
+											style="color: #999 !important;"></i> <strong>Email:</strong>
+										info@egov.tn
+										<div class="clearfix"></div>
+										<div class="gap clearfix" style="height: 10px;"></div>
+
+									</div>
+								</div>
+								<div class="gap clearfix" style="height: 50px;"></div>
+								<div class="clearfix title-left">
+									<h2 class="col-title">
+										<i class="title-icon icon-time"
+											style="color: #cc8800 !important;"></i>Business Hours
+									</h2>
+								</div>
+								<div class="wpb_text_column wpb_content_element ">
+									<div class="wpb_wrapper">
+										<p>
+											<strong>Monday</strong> to<strong> Friday</strong>: 9.00 AM –
+											5.00 PM<br /> <strong>Saturday</strong> : 10.00 AM – 2.00 PM<br />
+											<strong>Sunday</strong>: Closed
+										</p>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+
+</ui:composition>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	   xmlns:f="http://xmlns.jcp.org/jsf/core"
+	   xmlns:h="http://xmlns.jcp.org/jsf/html"
+	   xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	   xmlns:jsf="http://xmlns.jcp.org/jsf"
+	   xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	   xmlns:p="http://primefaces.org/ui"
+	   template="/template/template.xhtml">
+
+	<ui:define name="pageTitle">
+Finance	</ui:define>	 
+	
+	<ui:define name="pageContent">
+		  <div class="row clearfix">
+           
+
+  					                    
+                  	<div class="vc_row wpb_row vc_row-fluid">
+	<div class="vc_col-sm-6 wpb_column vc_column_container">
+		<div class="wpb_wrapper">
+			<div class="clearfix title-left"><h2 class="col-title"><i class="title-icon icon-edit"  style="color:#cc8800 !important;" ></i>Funding Company List</h2></div><div class="wpcf7" id="wpcf7-f5-p261-o2" lang="en-US" dir="ltr">
+<div class="screen-reader-response"></div>
+</div>
+</div></div>
+
+	<br/>
+	<br/>
+	
+		<h:form id="form">
+		
+    <p:accordionPanel value="#{companyBean.financeInsList}" var="institut">
+        <p:tab title="Institut : #{institut.name}">
+           <table><tr><td style="width: 15%;"> <p:graphicImage name="img/test2.png" /></td><td style="width: 70%;"><h:outputText value="#{institut.description}" /> <h:outputText value="#{institut.mail}" /></td>
+           <td> <p:commandButton value="Request funding"  icon="ui-icon-disk" action="#{companyBean.redirectToRequestFinance()}"></p:commandButton></td></tr></table>
+         
+               
+           
+           
+ 
+           
+        </p:tab>
+    </p:accordionPanel>
+		
+  
+		</h:form>	
+		</div>
+		</div>
+	
+	</ui:define>	   
+	
+</ui:composition>

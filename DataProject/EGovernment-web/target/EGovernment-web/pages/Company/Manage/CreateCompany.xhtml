@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui" template="/template/template.xhtml">
+
+	<ui:define name="pageTitle">
+Create Company	</ui:define>
+
+	<ui:define name="pageContent">
+		<div class="row clearfix">
+
+
+
+			<div class="vc_row wpb_row vc_row-fluid">
+				<div class="vc_col-sm-6 wpb_column vc_column_container">
+					<div class="wpb_wrapper">
+						<div class="clearfix title-left">
+							<h2 class="col-title">
+								<i class="title-icon icon-edit"
+									style="color: #cc8800 !important;"></i>Contact Form
+							</h2>
+						</div>
+						<div class="wpcf7" id="wpcf7-f5-p261-o2" lang="en-US" dir="ltr">
+							<div class="screen-reader-response"></div>
+							<h:form>
+								<div style="display: none;">
+									<input type="hidden" name="_wpcf7" value="5" /> <input
+										type="hidden" name="_wpcf7_version" value="4.0.1" /> <input
+										type="hidden" name="_wpcf7_locale" value="en_US" /> <input
+										type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f5-p261-o2" />
+									<input type="hidden" name="_wpnonce" value="f693799c86" />
+								</div>
+								<p>
+									Company Name :<br /> <span
+										class="wpcf7-form-control-wrap your-name"><input
+										type="text" name="your-name"
+										jsf:value="#{companyBean.comRequest.name}" size="40"
+										class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+										aria-required="true" aria-invalid="false" /></span>
+								</p>
+								<p>
+									Company Description :<br /> <span
+										class="wpcf7-form-control-wrap your-email"><input
+										type="email" name="your-email"
+										jsf:value="#{companyBean.comRequest.description}" size="40"
+										class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+										aria-required="true" aria-invalid="false" /></span>
+								</p>
+								<p>
+									Type Company :<br /> <span
+										class="wpcf7-form-control-wrap your-subject"><input
+										type="text" name="your-subject" value="" size="40"
+										class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span>
+								</p>
+								<p>
+									Activity Sector :<br /> <span
+										class="wpcf7-form-control-wrap your-message"><textarea
+											name="your-message" cols="40" rows="10"
+											class="wpcf7-form-control wpcf7-textarea"
+											aria-invalid="false"></textarea></span>
+								</p>
+								<p>
+									<h:commandButton action="#{companyBean.addCompanyRequest()}"
+										value="Submit" />
+								</p>
+								<div class="wpcf7-response-output wpcf7-display-none"></div>
+							</h:form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<h:form>
+
+			<h:panelGrid columns="2" layout="grid">
+				<h:outputText value="Company Name :" />
+				<h:inputText value="#{companyBean.comRequest.name}"
+					styleClass="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+					pt:required="true" />
+
+				<h:outputText value="Company Description :" />
+				<h:inputText value="#{companyBean.comRequest.description}"
+					pt:required="true" />
+				<p:outputLabel for="console" value="Type Company :" />
+
+
+				<p:selectOneRadio id="console"
+					value="#{companyBean.comRequest.type}">
+					<f:selectItem itemLabel="Limited Liability Companies"
+						itemValue="Limited Liability Companies" />
+					<f:selectItem itemLabel="C Corporations" itemValue="C Corporations" />
+					<f:selectItem itemLabel="Sole Proprietorships"
+						itemValue="Sole Proprietorships" />
+				</p:selectOneRadio>
+
+				<p:outputLabel for="console" value="Activity Sector :" />
+				<p:selectOneListbox id="basic"
+					value="#{companyBean.comRequest.secteurActivity}">
+					<f:selectItem itemLabel="Agriculture" itemValue="Agriculture" />
+					<f:selectItem itemLabel="Construction " itemValue="Construction " />
+					<f:selectItem itemLabel="Oil and gas" itemValue="Oil and gas" />
+					<f:selectItem itemLabel="Administrative and public services "
+						itemValue="Administrative and public services " />
+					<f:selectItem itemLabel="Textiles" itemValue="Textiles" />
+				</p:selectOneListbox>
+			</h:panelGrid>
+			<h:commandButton action="#{companyBean.addCompanyRequest()}"
+				value="Submit" />
+
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>

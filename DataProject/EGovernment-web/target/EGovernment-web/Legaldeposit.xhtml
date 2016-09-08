@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui"
+	template="/template/template.xhtml">
+
+	<ui:define name="pageTitle">
+		Legal deposit of films
+	</ui:define>
+	
+	<ui:define name="pageContent">
+		
+		
+		<h:form>
+		<p:commandLink action="/pages/Company/Secteurs/CinemaInfo" value="> Cinema" />
+		<p:commandLink action="/pages/Company/Secteurs/Legaldeposit" value=" > Legal deposit of films" />
+	    <h:head> <h1><p:outputLabel value="Legal deposit of films"/></h1> </h:head>
+        <p:outputLabel value="As publications, films screened in cinemas are subject to mandatory legal deposit with the National Film Centre and the moving image (CNC). Producers and distributors of films are required to perform this procedure for heritage preservation."/>
+		<p:dataTable value="#{infoCinemaBean.cinema}" >
+		<p:column>
+		<f:facet name="header">
+		Concerned films 
+		</f:facet>
+		<p:outputLabel value="#{infoCinemaBean.cinema.filmConcerne}" />
+		</p:column>
+		<p:column>
+		<f:facet name="header">
+		Who can depose
+		</f:facet>
+		<p:outputLabel value="#{infoCinemaBean.cinema.qui}" />
+		</p:column>
+		<p:column>
+		<f:facet name="header">
+		How to depose 
+		</f:facet>
+		<p:outputLabel value="#{infoCinemaBean.cinema.comment}" />
+		</p:column>
+		<p:column>
+		<f:facet name="header">
+         Consultation film deposited		
+         </f:facet>
+		<p:outputLabel value="#{infoCinemaBean.cinema.consultation}" />
+		</p:column>
+		
+		</p:dataTable>
+		</h:form>
+				
+	</ui:define>
+
+</ui:composition>

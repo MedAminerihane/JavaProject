@@ -1,0 +1,15 @@
+edu\esprit\web\DemandeCinemaBean.class
+edu\esprit\web\Utils.class
+edu\esprit\web\InfoTax.class
+edu\esprit\web\EntrepriseBean.class
+edu\esprit\web\InfoPharmacy.class
+edu\esprit\web\AuthenticationBean.class
+edu\esprit\web\InfoImpot.class
+edu\esprit\web\CompanyBean.class
+edu\esprit\web\TaxeBean.class
+edu\esprit\web\PharLocation.class
+edu\esprit\web\LoginFilter.class
+edu\esprit\web\MailBean.class
+edu\esprit\web\InfoSante.class
+edu\esprit\web\InfoCinemaBean.class
+edu\esprit\web\MapTest.class

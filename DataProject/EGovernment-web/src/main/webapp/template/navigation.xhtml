@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui">
+
+
+	<ul id="menu-main-menu" class="sf-menu">
+		<li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-20 current_page_item menu-item-has-children"><h:commandLink action="/pages/entreprise/home" value="HOME" /></li>
+
+		<li id="menu-item-46" class="submenu_3col menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+			<h:commandLink action="/pages/entreprise/secteurs" value="Secteurs" />
+			<ul class="sub-menu">
+				<li id="menu-item-388" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"></li>
+				<li id="menu-item-389" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"></li>
+				<li id="menu-item-389" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"></li>
+			</ul>
+		</li>
+
+		<li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page">
+			<h:commandLink action="/pages/entreprise/fiscalite" value="Fiscalité" />
+			<ul class="sub-menu">
+			  
+				<li id="menu-item-388" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><h:commandLink action="/pages/admin/home" value="HOME" /></li>
+				<li id="menu-item-388" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><h:commandLink action="/pages/admin/home" value="HOME" /></li>
+			  
+				<li id="menu-item-389" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><h:commandLink action="/pages/admin/home" value="HOME" /></li>
+				<li id="menu-item-389" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><h:commandLink action="/pages/admin/home" value="HOME" /></li>
+			</ul>
+		</li>
+
+		<li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+			<h:commandLink action="/pages/entreprise/finance" value="Finance" />
+			<ul class="sub-menu">
+				<li id="menu-item-388" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><h:commandLink action="/pages/entreprise/commerce" value="Commerce" /></li>
+				<li id="menu-item-388" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><h:commandLink action="/pages/entreprise/commerce" value="Commerce" /></li>
+				<li id="menu-item-389" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><h:commandLink action="/pages/entreprise/commerce" value="Commerce" /></li>
+			</ul>
+		</li>
+
+		<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+			<h:commandLink action="/pages/entreprise/commerce" value="Commerce" />
+			<ul class="sub-menu">
+				<li id="menu-item-388" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">@Html.ActionLink("Driving Licence", "Permis", "Service")</li>
+			</ul>
+		</li>
+
+		<li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page">
+			<h:commandLink action="/pages/entreprise/actualites" value="Actualités" />
+			<ul class="sub-menu">
+				<li id="menu-item-388" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><h:commandLink action="/pages/entreprise/commerce" value="Commerce" /></li>
+				<li id="menu-item-389" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><h:commandLink action="/pages/entreprise/commerce" value="Commerce" /></li>
+			</ul>
+		</li>
+		
+		<li id="menu-item-571" class="special menu-item menu-item-type-post_type menu-item-object-page"><h:commandLink action="/pages/entreprise/login" value="Login" /></li>
+		
+	</ul>
+	   
+		
+</ui:composition>

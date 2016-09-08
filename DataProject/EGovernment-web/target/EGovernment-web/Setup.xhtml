@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui" template="/template/template.xhtml">
+
+	<ui:define name="pageTitle">
+		1-Declaration Taxe
+	</ui:define>
+
+	<ui:define name="pageContent">
+		<div class="breadcrumb-place ">
+			<div class="row clearfix">
+				<h1 class="page-title">Secteurs</h1>
+			</div>
+			<!-- row -->
+		</div>
+
+		<h:messages globalOnly="true" />
+		<div id="main" class="page-content">
+			<div class="page-content">
+				<div class="row clearfix">
+					<div class="vc_row wpb_row vc_row-fluid">
+
+						<div class=" grid_8 posts m-thumbnails">
+							<div class="wpb_wrapper">
+								<div class="clearfix title-left">
+									<h2 class="col-title">
+										<i class="title-icon icon-edit"
+											style="color: #cc8800 !important;"></i> Process Setup Company
+									</h2>
+								</div>
+
+								<div class="wpcf7" id="wpcf7-f5-p261-o2" lang="en-US" dir="ltr">
+
+
+									<h:form id="form">
+
+
+										<p:panelGrid columns="1" style="width:100%;margin:10px 0px"
+											columnClasses="label,value" layout="grid">
+											<f:facet name="header" style="width:100%">
+1-The drafting of statutes
+          </f:facet>
+											<h:outputText
+												value="First, write and sign a draft constitution, which will be used mainly to open a bank account." />
+										</p:panelGrid>
+										<p:panelGrid columns="1" style="width:100%;margin:10px 0px"
+											columnClasses="label,value" layout="grid">
+											<f:facet name="header" style="width:100%">
+2-The legal notice
+          </f:facet>
+
+											<h:outputText
+												value="Among the supporting documents: a certificate of publication of a legal notice.
+
+CFE on the site, you will find the list of eligible logs from your department. The prices are the same regardless of the newspaper." />
+
+										</p:panelGrid>
+
+
+										<p:panelGrid columns="1" style="width:100%;margin:10px 0px"
+											columnClasses="label,value" layout="grid">
+											<f:facet name="header">
+3-The online Folder          </f:facet>
+
+											<h:outputText
+												value="
+Armed with these statutes signed projects, contact your bank to open an account new company. It is a sometimes delicate stage insofar as the banker does not necessarily welcome you with open arms and will require additional information on the proposed activity, the development prospects, etc." />
+
+
+											<p:button outcome="/pages/Company/Manage/CreateCompany"
+												value="Send Request" icon="ui-icon-star">
+											</p:button>
+										</p:panelGrid>
+										<p:panelGrid columns="1" style="width:100%;margin:10px 0px"
+											columnClasses="label,value" layout="grid">
+											<f:facet name="header">
+4-Sending the paper Folder           </f:facet>
+
+
+											<h:outputText
+												value="E-Gov on the site, you will find the list of eligible logs from your department. The prices are the same regardless of the newspaper.
+
+Just on this site, fill out the online form. You can then view your ad, validate, pay by credit card, you will receive your certificate by return email." />
+										</p:panelGrid>
+
+										<p:panelGrid columns="1" style="width:100%;margin:10px 0px"
+											columnClasses="label,value" layout="grid">
+											<f:facet name="header">
+5-Registration to the tax
+          </f:facet>
+
+											<h:outputText
+												value="Armed with a few copies of the articles, you must go to the tax which the registered office of the company and register the statutes. The service will retain a copy and make you others that can serve you for other possible further formalities. You can also perform this step by correspondence." />
+
+										</p:panelGrid>
+
+
+
+
+									</h:form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</ui:define>
+
+</ui:composition>

@@ -1,0 +1,121 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui" template="/template/template.xhtml">
+
+
+	<ui:define name="pageTitle">Send Mail</ui:define>
+	<ui:define name="pageContent">
+		<div class="breadcrumb-place ">
+			<div class="row clearfix">
+				<h1 class="page-title">Contact</h1>
+			</div>
+			<!-- row -->
+		</div>
+
+
+		<div id="main" class="page-content">
+			<div class="page-content">
+				<div class="row clearfix">
+					<div class="vc_row wpb_row vc_row-fluid">
+
+						<div class=" grid_8 posts m-thumbnails">
+							<div class="wpb_wrapper">
+								<div class="clearfix title-left">
+									<h2 class="col-title">
+										<i class="title-icon icon-edit"
+											style="color: #cc8800 !important;"></i> Contact
+									</h2>
+								</div>
+
+								<div class="wpcf7" id="wpcf7-f5-p261-o2" lang="en-US" dir="ltr">
+
+									<h:form>
+										<div class="screen-reader-response"></div>
+
+										<p>
+											Subject:<br /> <span><h:inputText size="30"
+													id="subject" value="#{MailBean.subject}" required="true"
+													requiredMessage="Required" /> <h:message for="subject"
+													style="color:red" /> </span>
+										</p>
+
+										<p>
+											Message:<br /> <span> <h:inputTextarea cols="45"
+													rows="15" id="message" value="#{MailBean.message}"
+													required="true" requiredMessage="Required" /> <h:message
+													for="message" style="color:red" />
+											</span>
+										</p>
+
+										<p>
+											<h:commandButton value="Send" action="#{MailBean.send()}" />
+										</p>
+									</h:form>
+
+
+								</div>
+							</div>
+						</div>
+
+
+
+						<div class="vc_col-sm-4 wpb_column vc_column_container">
+							<div class="wpb_wrapper">
+								<div class="clearfix title-left">
+									<h2 class="col-title">
+										<i class="title-icon icon-map-marker"
+											style="color: #cc8800 !important;"></i>Address
+									</h2>
+								</div>
+								<div class="wpb_text_column wpb_content_element ">
+									<div class="wpb_wrapper">
+										<p>
+											<strong>Avenue Habib Bourguiba, 1000 Tunis, Tunisie</strong><br />
+										</p>
+										<div class="gap clearfix" style="height: 10px;"></div>
+										<i class="icon-phone icon-xs" style="color: #999 !important;"></i>
+										<strong>Tel</strong>: 71333000
+										<div class="clearfix"></div>
+										<i class="icon-print icon-xs" style="color: #999 !important;"></i>
+										<strong>Fax:</strong> 71333000
+										<div class="clearfix"></div>
+										<i class="icon-envelope-alt icon-xs"
+											style="color: #999 !important;"></i> <strong>Email:</strong>
+										info@egov.tn
+										<div class="clearfix"></div>
+										<div class="gap clearfix" style="height: 10px;"></div>
+
+									</div>
+								</div>
+								<div class="gap clearfix" style="height: 50px;"></div>
+								<div class="clearfix title-left">
+									<h2 class="col-title">
+										<i class="title-icon icon-time"
+											style="color: #cc8800 !important;"></i>Business Hours
+									</h2>
+								</div>
+								<div class="wpb_text_column wpb_content_element ">
+									<div class="wpb_wrapper">
+										<p>
+											<strong>Monday</strong> to<strong> Friday</strong>: 9.00 AM –
+											5.00 PM<br /> <strong>Saturday</strong> : 10.00 AM – 2.00 PM<br />
+											<strong>Sunday</strong>: Closed
+										</p>
+
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+
+</ui:composition>

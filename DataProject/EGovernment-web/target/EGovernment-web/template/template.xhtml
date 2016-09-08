@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	   xmlns:f="http://xmlns.jcp.org/jsf/core"
+	   xmlns:h="http://xmlns.jcp.org/jsf/html"
+	   xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	   xmlns:jsf="http://xmlns.jcp.org/jsf"
+	   xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	   xmlns:p="http://primefaces.org/ui">
+	
+	<h:head>
+	 
+		<title><ui:insert name="pageTitle" /></title>
+		<script type="text/javascript"> 
+			<ui:insert name="script" />
+		</script>
+		
+		<ui:insert name="head" />
+		
+			
+			<!-- CSS -->
+		<link rel='stylesheet' id='stylesheet-css'  href='${request.contextPath}/resources/css/style20b9.css?ver=1.0.2' type='text/css' media='all' />
+		<link rel='stylesheet' id='icons-css'  href='${request.contextPath}/resources/css/icons5152.css?ver=1.0' type='text/css' media='all' />
+		<link rel='stylesheet' id='wooshop-css'  href='${request.contextPath}/resources/css/shop5152.css?ver=1.0' type='text/css' media='all' />
+		<link rel='stylesheet' id='flaticon-css'  href='${request.contextPath}/resources/css/flaticon/flaticon5152.css?ver=1.0' type='text/css' media='all' />
+		<link rel='stylesheet' id='animate-css'  href='${request.contextPath}/resources/css/animate5152.css?ver=1.0' type='text/css' media='all' />
+		<link rel='stylesheet' id='responsive-css'  href='${request.contextPath}/resources/css/responsive5152.css?ver=1.0' type='text/css' media='all' />
+		<link rel='stylesheet' id='contact-form-7-css'  href='${request.contextPath}/resources/css/stylesf39e.css?ver=4.0.1' type='text/css' media='all' />
+		<link rel='stylesheet' id='rs-plugin-settings-css'  href='${request.contextPath}/resources/css/settings1dc6.css?ver=4.6.5' type='text/css' media='all'/>
+		<link rel='stylesheet' id='woocommerce-layout-css'  href='${request.contextPath}/resources/css/woocommerce-layout7888.css?ver=2.2.8' type='text/css' media='all' />
+		<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='${request.contextPath}/resources/css/woocommerce-smallscreen7888.css?ver=2.2.8' type='text/css' media='only screen and (max-width: 768px)' />
+		<link rel='stylesheet' id='woocommerce-general-css'  href='${request.contextPath}/resources/css/woocommerce7888.css?ver=2.2.8' type='text/css' media='all' />
+		<link rel='stylesheet' id='js_composer_front-css'  href='${request.contextPath}/resources/css/js_composer7035.css?ver=4.3.4' type='text/css' media='all' />
+		<link rel='stylesheet' id='js_composer_custom_css-css'  href='${request.contextPath}/resources/css/custom7035.css?ver=4.3.4' type='text/css' media='screen' />
+		<link rel='stylesheet' id='stylesheet-css'  href='${request.contextPath}/resources/css/best.css' type='text/css' media='all' />
+		
+		<style>.logo img{background-color:#cc8800}</style>	
+
+		<link rel="shortcut icon" type="image/x-con" href="#{request.contextPath}/resources/img/favicon.ico" />
+	</h:head>
+
+	<h:body Styleclass="home page page-id-20 page-template-default wpb-js-composer js-comp-ver-4.3.4 vc_responsive">
+
+			<div id="home" >
+				<div id="layout" class="full">    
+					<header id="header" class="header_v2 header_v9">
+						<ui:include src="/template/header.xhtml" />
+						<ui:include src="/template/identity.xhtml" />
+						
+					</header>
+					<div id="main" class="page-content">
+						<ui:insert name="pageContent" />
+					</div>
+					<footer id="footer">
+						<ui:include src="/template/footer.xhtml" />
+					</footer>
+				</div>
+			</div>
+
+				
+				
+		<!-- JAVA SCRIPT -->
+	<script type='text/javascript' src='${request.contextPath}/resources/js/jquery.prettyPhoto128b.js?ver=3.1'></script>
+	<script type='text/javascript' src='${request.contextPath}/resources/js/twitter/jquery.tweet62ea.js?ver=1.2'></script>
+	<script type='text/javascript' src='${request.contextPath}/resources/js/custom5152.js?ver=1.0'></script>
+	<script type='text/javascript' src='${request.contextPath}/resources/js/comment-reply.minf9b8.js?ver=4.0'></script>
+	<script type='text/javascript' src='${request.contextPath}/resources/js/jquery/ui/jquery.ui.core.min2c18.html?ver=1.10.4'></script>
+	<script type='text/javascript' src='${request.contextPath}/resources/js/jquery/ui/jquery.ui.widget.min2c18.html?ver=1.10.4'></script>
+	<script type='text/javascript' src='${request.contextPath}/resources/js/jquery/ui/jquery.ui.tabs.min2c18.html?ver=1.10.4'></script>
+	<script type='text/javascript' src='${request.contextPath}/resources/js/jquery/ui/jquery.ui.accordion.min2c18.html?ver=1.10.4'></script>
+
+			
+	
+	</h:body>
+</html>
